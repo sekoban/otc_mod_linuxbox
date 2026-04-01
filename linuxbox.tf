@@ -52,6 +52,7 @@ resource "opentelekomcloud_ecs_instance_v1" "linuxbox" {
 # opentelekomcloud_networking_floatingip_associate_v2
 # https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/1.36.62/docs/resources/networking_floatingip_associate_v2
 resource "opentelekomcloud_networking_floatingip_associate_v2" "eip_association" {
-  floating_ip = var.eip #opentelekomcloud_vpc_eip_v1.eip.publicip[0].ip_address
+  count       = var.eip != "" ? 1 : 0
+  floating_ip = var.eip
   port_id     = opentelekomcloud_ecs_instance_v1.linuxbox.nics.0.port_id
 }
