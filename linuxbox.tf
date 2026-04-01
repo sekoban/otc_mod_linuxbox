@@ -1,8 +1,8 @@
 # opentelekomcloud_compute_keypair_v2
 # https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/1.36.62/docs/data-sources/compute_keypair_v2
-data "opentelekomcloud_compute_keypair_v2" "keypair" {
-  name = var.ssh_key_name
-}
+#data "opentelekomcloud_compute_keypair_v2" "keypair" {
+#  name = var.ssh_key_name
+#}
 
 # opentelekomcloud_images_image_v2
 # https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/1.36.62/docs/data-sources/images_image_v2
