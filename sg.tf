@@ -1,9 +1,13 @@
+# opentelekomcloud_networking_secgroup_v2
+# https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/1.36.62/docs/resources/networking_secgroup_v2
 resource "opentelekomcloud_networking_secgroup_v2" "sg" {
   name                 = "${var.name}_sg"
   description          = "${var.name} security group"
   delete_default_rules = true
 }
 
+# opentelekomcloud_networking_secgroup_rule_v2
+# https://registry.terraform.io/providers/opentelekomcloud/opentelekomcloud/1.36.62/docs/resources/networking_secgroup_rule_v2
 resource "opentelekomcloud_networking_secgroup_rule_v2" "sg_group_in" {
   direction         = "ingress"
   protocol          = ""
